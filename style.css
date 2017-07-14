@@ -1,0 +1,40 @@
+body {
+  background-color: black;
+  display: flex;
+  justify-content: center;
+}
+
+.displayButton {
+  width: 328px;
+  height: 64px;
+  color: black;
+  background-color: #9932cc;
+  /*display: inline-block;*/
+  margin: 2px;
+}
+
+button {
+  width: 10em;
+  height: 6em;
+  color: black;
+  background-color: #9932cc;
+  margin-bottom: 1px;
+}
+
+.calculator {
+  display: flex;
+  flex-direction: column;
+}
+
+#cPad,
+#numbersTop,
+#numbersSecondTop,
+#numbersThirdTop,
+#numbersBottom {
+  display: flex;
+}
+
+#cPad {
+  display: flex;
+  flex-direction: row;
+}
