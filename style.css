@@ -16,6 +16,17 @@ body {
   background-color: white;
 }
 
+.equal {
+  width: 10em;
+  height: 8em;
+  color: black;
+  background-image: url("images/gorilla.gif");
+  margin-bottom: 1px;
+  /*background-size: 80px 60px;*/
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
 button {
   width: 10em;
   height: 8em;
