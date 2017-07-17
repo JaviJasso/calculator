@@ -1,23 +1,26 @@
 body {
-  background-color: black;
   display: flex;
   justify-content: center;
+  background-image: url("images/source.gif");
+  background-size: cover;
+  background-repeat: no-repeat;
+  height: 100%;
 }
 
 .displayButton {
   width: 328px;
-  height: 64px;
+  height: 84px;
   color: black;
-  background-color: #9932cc;
   /*display: inline-block;*/
   margin: 2px;
+  background-color: white;
 }
 
 button {
   width: 10em;
-  height: 6em;
+  height: 8em;
   color: black;
-  background-color: #9932cc;
+  background-color: #a0d8e5;
   margin-bottom: 1px;
 }
 
