@@ -6,42 +6,44 @@ let equal = document.querySelector(".equal")
 
 let valor = ""
 let operator = ""
-let x = ""
-let y = ""
+let x = 0
+let y = 0
 
 for (let i = 0; i < numbers.length; i++) {
   let current = numbers[i]
-  console.log(current)
   current.addEventListener("click", () => {
-    let value = current.innerText
-    valor += value // <====Cambia elvalor y pon como haras el X y Y para todas las opreaciones
-    display.textContent = valor
+    // let value = current.innerText
+    // valor += value // <====Cambia elvalor y pon como haras el X y Y para todas las opreaciones
+    display.textContent += current.innerText
   })
 }
 
 for (let i = 0; i < operators.length; i++) {
   let current = operators[i]
-  console.log(current)
   current.addEventListener("click", () => {
     operator = current.textContent
-    console.log(operator)
+    x = parseInt(display.textContent) // display.textContent is a string but we need x to be a number - parseInt converts the text to a number
+    display.textContent = ""
   })
 }
 
 equal.addEventListener("click", () => {
+  y = parseInt(display.textContent)
   if (operator === "+") {
-    result = parseInt(x) + parseInt(y)
+    result = x + y
   } else if (operator === "-") {
-    result = parseInt(x) - parseInt(y)
+    result = x - y
   } else if (operator === "*") {
-    result = parseInt(x) * parseInt(y)
+    result = x * y
   } else if (operator === "/") {
-    result = parseInt(x) / parseInt(y)
+    result = x / y
+  } else {
+    display.textContent = "Err"
   }
+  display.textContent = ""
   display.textContent = result
 })
 
 clear.addEventListener("click", () => {
-  valor = ""
-  display.textContent = valor
+  display.textContent = ""
 })
